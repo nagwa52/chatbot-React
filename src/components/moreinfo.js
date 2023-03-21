@@ -5,12 +5,12 @@ import "./knopf.css";
 const Moreinfo = (props) => {
 	const moreinfo = [
 		{
-			text: "Yes!",
+			text: "Yes",
 			handler: props.actionProvider.makeAidApplication,
 			id: 1,
 		},
 		{
-			text: "No!",
+			text: "No",
 			handler: props.actionProvider.makeAidApplication,
 			id: 2,
 		},
