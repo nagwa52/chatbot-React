@@ -12,10 +12,11 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
     "react-typed": "^1.2.0",
-    "react-util-kit": "^0.0.14"
+    "react-util-kit": "^0.0.14",
+    "yarn": "^1.22.19"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

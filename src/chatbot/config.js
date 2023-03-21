@@ -7,16 +7,21 @@ import Genre from "../components/Genre";
 import Book from "../components/Book";
 import Help from "../components/Help";
 import Author from "../components/Author";
+import Moreinfo from "../components/moreinfo";
+import Moreinfoyes from "../components/moreinfoyes";
+import Moreinfono from "../components/moreinfono";
+import Moreinfonono from "../components/moreinfonono";
 
-const botName = "Luca";
+
+const botName = "Larry";
 
 const config = {
   botName: botName,
   initialMessages: [
     createChatBotMessage(
-      `Hallo, ich bin ${botName}, dein Empfehlungssystem. Ich würde dir gerne bei deiner Suche behilflich sein und dir Bücher empfehlen.`
+      `Hi there! I am ${botName}, your DMS chat bot and I am here to help you. Below are some common things that people ask me.`
     ),
-    createChatBotMessage(`Wonach möchtest du suchen?`, {
+    createChatBotMessage(`CHOOSE AN OPTION`, {
       widget: "help"
     })
   ],
@@ -51,6 +56,22 @@ const config = {
     {
       widgetName: "choices",
       widgetFunc: (props) => <Choices {...props} />
+    },
+    {
+      widgetName: "moreinfo",
+      widgetFunc: (props) => <Moreinfo {...props} />
+    },
+    {
+      widgetName: "moreinfoyes",
+      widgetFunc: (props) => <Moreinfoyes {...props} />
+    },
+    {
+      widgetName: "moreinfono",
+      widgetFunc: (props) => <Moreinfono {...props} />
+    },
+    {
+      widgetName: "moreinfonono",
+      widgetFunc: (props) => <Moreinfonono {...props} />
     },
     {
       widgetName: "newChoices",

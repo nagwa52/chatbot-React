@@ -1,25 +1,14 @@
 import React from "react";
 
-import "./Knopf.css";
+import "./knopf.css";
 
 const Genre = (props) => {
   const genres = [
     {
-      text: "Fantasy",
-      handler: props.actionProvider.recommend,
+      text: "I want more information",
+      handler: props.actionProvider.moreInformation,
       id: 1
     },
-    { text: "Krimi", handler: props.actionProvider.recommend, id: 2 },
-    {
-      text: "Liebesroman",
-      handler: props.actionProvider.recommend,
-      id: 3
-    },
-    {
-      text: "Sci-Fi",
-      handler: props.actionProvider.recommend,
-      id: 4
-    }
   ];
 
   const genreHandler = (event) => {
@@ -31,7 +20,7 @@ const Genre = (props) => {
     <button
       key={genre.id}
       value={genre.text}
-      onClick={genreHandler}
+      onClick={genre.handler}
       className="knopf-button"
     >
       {genre.text}

@@ -20,13 +20,20 @@ class MessageParser {
     }
 
     if (
-      lowercase.includes("fantasy") ||
-      lowercase.includes("krimi") ||
-      lowercase.includes("liebesroman") ||
-      lowercase.includes("sci-Fi") ||
-      lowercase.includes("kinderbuch")
+      lowercase.includes("book")
     ) {
-      this.actionProvider.chooseGenre();
+      this.actionProvider.bookAppointment();
+    }
+    if (
+      lowercase.includes("make a legal aid application")
+    ) {
+      this.actionProvider.makeAidApplication();
+    }
+    if (
+      lowercase.includes("more") ||
+      lowercase.includes("information")
+    ) {
+      this.actionProvider.moreInformation();
     }
 
     if (lowercase.includes("javascript") || lowercase.includes("js")) {

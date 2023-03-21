@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Knopf.css";
+import "./knopf.css";
 
 const Author = (props) => {
   const authors = [
