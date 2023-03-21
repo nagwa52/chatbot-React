@@ -2,17 +2,12 @@ import React from "react";
 
 import "./knopf.css";
 
-const Moreinfo = (props) => {
+const Moreinfoyes = (props) => {
 	const moreinfo = [
 		{
-			text: "YES",
-			handler: props.actionProvider.moreInformationYes,
+			text: "Start my application now",
+			handler: props.actionProvider.startApplication,
 			id: 1,
-		},
-		{
-			text: "NO",
-			handler: props.actionProvider.moreInformationNo,
-			id: 2,
 		},
 	];
 
@@ -35,4 +30,4 @@ const Moreinfo = (props) => {
 	return <div className="knopf-container">{buttonsMarkup}</div>;
 };
 
-export default Moreinfo;
+export default Moreinfoyes;

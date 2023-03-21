@@ -22,11 +22,11 @@ class ActionProvider {
     this.addMessageToState(message);
   };
 
-  chooseGenre = () => {
+  chooseAnOption = () => {
     const message = this.createChatBotMessage(
-      "Aus welchem Genre soll das Buch sein? Wenn du nach einem anderen Genre suchst, tippe den Namen ein.",
+      "CHOOSE AN OPTION :",
       {
-        widget: "genre"
+        widget: "help"
       }
     );
     this.addMessageToState(message);
@@ -53,6 +53,42 @@ class ActionProvider {
       "Are you in receipt of any of these specific benefits? (Universal Credit, Income Support, Employment and Support Allowance Income-Related, Jobseeker's allowance)",
       {
         widget: "moreinfo"
+      }
+    );
+    this.addMessageToState(message);
+  };
+  moreInformationYes = () => {
+    const message = this.createChatBotMessage(
+      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      {
+        widget: "moreinfoyes"
+      }
+    );
+    this.addMessageToState(message);
+  };
+  moreInformationNo = () => {
+    const message = this.createChatBotMessage(
+      "Do you think you might be entitled to legal aid because you are on a low income/no income/homeless?",
+      {
+        widget: "moreinfono"
+      }
+    );
+    this.addMessageToState(message);
+  };
+  moreInformationNoNo = () => {
+    const message = this.createChatBotMessage(
+      "Because you are not receiving benefits or in low income, it is unlikely that you will qualify for legal aid. Knowing you might not be entitled to legal aid, would you still like to make an application for legal aid?",
+      {
+        widget: "moreinfonono"
+      }
+    );
+    this.addMessageToState(message);
+  };
+  startApplication = () => {
+    const message = this.createChatBotMessage(
+      window.open('https://www.directmediationservices.co.uk/laa-passporting/', '_blank', 'noreferrer'),
+      {
+        widget: "help"
       }
     );
     this.addMessageToState(message);

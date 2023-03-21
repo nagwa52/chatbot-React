@@ -2,8 +2,8 @@ import React from "react";
 
 import "./knopf.css";
 
-const Moreinfo = (props) => {
-	const moreinfo = [
+const Moreinfono = (props) => {
+	const moreinfono = [
 		{
 			text: "YES",
 			handler: props.actionProvider.moreInformationYes,
@@ -11,7 +11,7 @@ const Moreinfo = (props) => {
 		},
 		{
 			text: "NO",
-			handler: props.actionProvider.moreInformationNo,
+			handler: props.actionProvider.chooseAnOption,
 			id: 2,
 		},
 	];
@@ -21,7 +21,7 @@ const Moreinfo = (props) => {
 	// 	props.actionProvider.recommend(event.target.value);
 	// };
 
-	const buttonsMarkup = moreinfo.map((choice) => (
+	const buttonsMarkup = moreinfono.map((choice) => (
 		<button
 			key={choice.id}
 			value={choice.text}
@@ -35,4 +35,4 @@ const Moreinfo = (props) => {
 	return <div className="knopf-container">{buttonsMarkup}</div>;
 };
 
-export default Moreinfo;
+export default Moreinfono;

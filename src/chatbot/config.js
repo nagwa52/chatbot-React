@@ -8,6 +8,10 @@ import Book from "../components/Book";
 import Help from "../components/Help";
 import Author from "../components/Author";
 import Moreinfo from "../components/moreinfo";
+import Moreinfoyes from "../components/moreinfoyes";
+import Moreinfono from "../components/moreinfono";
+import Moreinfonono from "../components/moreinfonono";
+
 
 const botName = "Larry";
 
@@ -56,6 +60,18 @@ const config = {
     {
       widgetName: "moreinfo",
       widgetFunc: (props) => <Moreinfo {...props} />
+    },
+    {
+      widgetName: "moreinfoyes",
+      widgetFunc: (props) => <Moreinfoyes {...props} />
+    },
+    {
+      widgetName: "moreinfono",
+      widgetFunc: (props) => <Moreinfono {...props} />
+    },
+    {
+      widgetName: "moreinfonono",
+      widgetFunc: (props) => <Moreinfonono {...props} />
     },
     {
       widgetName: "newChoices",
