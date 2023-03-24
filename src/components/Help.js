@@ -25,26 +25,26 @@ const Help = (props) => {
     },
     {
       text: "I would like to have an update about my case",
-      handler: props.actionProvider.recommend,
+      handler: props.actionProvider.formFirstName,
       id: 3
     },
     {
       text: "I would like to know about the mediation process",
-      handler: props.actionProvider.recommend,
+      handler: props.actionProvider.mediationProcess,
       id: 4
+    },
+    {
+      text: "I would like to respond to an invitation to mediation",
+      handler: props.actionProvider.respondTOInvitation,
+      id: 5
     },
     {
       text: "I would like a call back",
       handler: props.actionProvider.recommend,
-      id: 5
-    },
-    {
-      text: "I would like to talk to somebody about workplace mediation",
-      handler: props.actionProvider.recommend,
       id: 6
     },
     {
-      text: "Default",
+      text: "I would like to talk to somebody about workplace mediation",
       handler: props.actionProvider.recommend,
       id: 7
     },

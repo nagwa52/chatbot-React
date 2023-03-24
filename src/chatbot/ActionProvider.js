@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc, state) {
     this.createChatBotMessage = createChatBotMessage;
@@ -13,7 +13,7 @@ class ActionProvider {
   }
 
   greet = () => {
-    const message = this.createChatBotMessage("Hello friend.");
+    const message = this.createChatBotMessage("Hello friend");
     this.addMessageToState(message);
   };
 
@@ -23,18 +23,23 @@ class ActionProvider {
   };
 
   chooseAnOption = () => {
-    const message = this.createChatBotMessage(
-      "CHOOSE AN OPTION :",
-      {
-        widget: "help"
-      }
-    );
+    const message = this.createChatBotMessage("CHOOSE AN OPTION :", {
+      widget: "help",
+    });
     this.addMessageToState(message);
   };
 
   bookAppointment = () => {
     const message = this.createChatBotMessage(
-      window.open('https://calendly.com/familymediation', '_blank', 'noreferrer')
+      "CHOOSE AN OPTION :",
+      {
+        widget: "help",
+      },
+      window.open(
+        "https://calendly.com/familymediation",
+        "_blank",
+        "noreferrer"
+      ),
     );
     this.addMessageToState(message);
   };
@@ -43,7 +48,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Legal aid is available for people in low income or in receipt of specific benefits.",
       {
-        widget: "genre"
+        widget: "genre",
       }
     );
     this.addMessageToState(message);
@@ -52,7 +57,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Are you in receipt of any of these specific benefits? (Universal Credit, Income Support, Employment and Support Allowance Income-Related, Jobseeker's allowance)",
       {
-        widget: "moreinfo"
+        widget: "moreinfo",
       }
     );
     this.addMessageToState(message);
@@ -61,7 +66,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
       {
-        widget: "moreinfoyes"
+        widget: "moreinfoyes",
       }
     );
     this.addMessageToState(message);
@@ -70,7 +75,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Do you think you might be entitled to legal aid because you are on a low income/no income/homeless?",
       {
-        widget: "moreinfono"
+        widget: "moreinfono",
       }
     );
     this.addMessageToState(message);
@@ -79,17 +84,97 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Because you are not receiving benefits or in low income, it is unlikely that you will qualify for legal aid. Knowing you might not be entitled to legal aid, would you still like to make an application for legal aid?",
       {
-        widget: "moreinfonono"
+        widget: "moreinfonono",
       }
     );
     this.addMessageToState(message);
   };
   startApplication = () => {
     const message = this.createChatBotMessage(
-      window.open('https://www.directmediationservices.co.uk/laa-passporting/', '_blank', 'noreferrer'),
+      window.open(
+        "https://www.directmediationservices.co.uk/laa-passporting/",
+        "_blank",
+        "noreferrer"
+      ),
       {
-        widget: "help"
+        widget: "help",
       }
+    );
+    this.addMessageToState(message);
+  };
+  formFirstName = () => {
+    const message = this.createChatBotMessage(
+      "What's your first name?",
+      // window.sessionStorage.setItem("fname", msg),
+      {
+        widget: "firstname",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formLastName = () => {
+    const message = this.createChatBotMessage(
+      "What's your surname/family name?",
+      // window.sessionStorage.setItem("fname", msg),
+      {
+        widget: "lastname",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formEmail = () => {
+    const message = this.createChatBotMessage(
+      "What's your email",
+      // window.sessionStorage.setItem("fname", msg),
+      {
+        widget: "email",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formPhone = () => {
+    const message = this.createChatBotMessage(
+      "What’s your phone number?",
+      {
+        widget: "phone",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formSave = () => {
+    const message = this.createChatBotMessage(
+      "save data",
+      {
+        widget: "data",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  mediationProcess = () => {
+    const message = this.createChatBotMessage(
+      "CHOOSE AN OPTION :",
+      {
+        widget: "help",
+      },
+      window.open(
+        "https://www.directmediationservices.co.uk/mediation-services-uk/",
+        "_blank",
+        "noreferrer"
+      ),
+    );
+    this.addMessageToState(message);
+  };
+  respondTOInvitation = () => {
+    const message = this.createChatBotMessage(
+      "CHOOSE AN OPTION :",
+      {
+        widget: "help",
+      },
+      window.open(
+        "https://www.directmediationservices.co.uk/reply-to-mediation/",
+        "_blank",
+        "noreferrer"
+      ),
     );
     this.addMessageToState(message);
   };
@@ -105,7 +190,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Von welchem Autor soll das Buch sein? Wenn du nach einem anderen Autor suchst, tippe den Namen ein.",
       {
-        widget: "author"
+        widget: "author",
       }
     );
     this.addMessageToState(message);
@@ -122,7 +207,7 @@ class ActionProvider {
       return {
         id: bookData.id,
         title: bookData.volumeInfo.title,
-        author: bookData.volumeInfo.authors
+        author: bookData.volumeInfo.authors,
       };
     });
     console.log(transformedData);
@@ -142,7 +227,7 @@ class ActionProvider {
     const message2 = this.createChatBotMessage(
       "Wie möchtest du fortfahren? Möchtest du das Buch kaufen? Du kannst mir auch sagen, was dir an der Empfehlung nicht gefällt. Oder du kannst die Suche beenden.",
       {
-        widget: "choices"
+        widget: "choices",
       }
     );
     this.addMessageToState(message2);
@@ -156,7 +241,7 @@ class ActionProvider {
     const message2 = this.createChatBotMessage(
       "Möchtest du noch ein Buch kaufen?",
       {
-        widget: "newChoices"
+        widget: "newChoices",
       }
     );
     this.addMessageToState(message2);
@@ -176,7 +261,7 @@ class ActionProvider {
   addMessageToState = (message) => {
     this.setState((prevState) => ({
       ...prevState,
-      messages: [...prevState.messages, message]
+      messages: [...prevState.messages, message],
     }));
   };
 }

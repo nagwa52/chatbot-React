@@ -11,7 +11,11 @@ import Moreinfo from "../components/moreinfo";
 import Moreinfoyes from "../components/moreinfoyes";
 import Moreinfono from "../components/moreinfono";
 import Moreinfonono from "../components/moreinfonono";
-
+import Firstname from "../components/firstname";
+import Lastname from "../components/lastname";
+import Email from "../components/email";
+import Phone from "../components/phone";
+import Data from "../components/data";
 
 const botName = "Larry";
 
@@ -72,6 +76,26 @@ const config = {
     {
       widgetName: "moreinfonono",
       widgetFunc: (props) => <Moreinfonono {...props} />
+    },
+    {
+      widgetName: "firstname",
+      widgetFunc: (props) => <Firstname {...props} />
+    },
+    {
+      widgetName: "lastname",
+      widgetFunc: (props) => <Lastname {...props} />
+    },
+    {
+      widgetName: "email",
+      widgetFunc: (props) => <Email {...props} />
+    },
+    {
+      widgetName: "phone",
+      widgetFunc: (props) => <Phone {...props} />
+    },
+    {
+      widgetName: "data",
+      widgetFunc: (props) => <Data {...props} />
     },
     {
       widgetName: "newChoices",
