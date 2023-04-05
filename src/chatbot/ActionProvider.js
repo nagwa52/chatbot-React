@@ -1,15 +1,10 @@
 import React from "react";
+
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc, state) {
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
     this.state = state;
-    //this.state = {
-    //genre: "",
-    //author: "",
-    //index: 0,
-    //book: {}
-    //}
   }
 
   greet = () => {
@@ -41,6 +36,7 @@ class ActionProvider {
         "noreferrer"
       ),
     );
+    
     this.addMessageToState(message);
   };
 
@@ -105,9 +101,17 @@ class ActionProvider {
   formFirstName = () => {
     const message = this.createChatBotMessage(
       "What's your first name?",
-      // window.sessionStorage.setItem("fname", msg),
       {
         widget: "firstname",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formFirstNameCall = () => {
+    const message = this.createChatBotMessage(
+      "What's your first name?",
+      {
+        widget: "firstnamecall",
       }
     );
     this.addMessageToState(message);
@@ -115,9 +119,17 @@ class ActionProvider {
   formLastName = () => {
     const message = this.createChatBotMessage(
       "What's your surname/family name?",
-      // window.sessionStorage.setItem("fname", msg),
       {
         widget: "lastname",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formLastNameCall = () => {
+    const message = this.createChatBotMessage(
+      "What's your surname/family name?",
+      {
+        widget: "lastnamecall",
       }
     );
     this.addMessageToState(message);
@@ -125,9 +137,17 @@ class ActionProvider {
   formEmail = () => {
     const message = this.createChatBotMessage(
       "What's your email",
-      // window.sessionStorage.setItem("fname", msg),
       {
         widget: "email",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formEmailCall = () => {
+    const message = this.createChatBotMessage(
+      "What's your email",
+      {
+        widget: "emailcall",
       }
     );
     this.addMessageToState(message);
@@ -141,11 +161,56 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
+  formPhoneCall = () => {
+    const message = this.createChatBotMessage(
+      "What’s your phone number?",
+      {
+        widget: "phonecall",
+      }
+    );
+    this.addMessageToState(message);
+  };
   formSave = () => {
     const message = this.createChatBotMessage(
-      "save data",
+      "To update your case click below...",
       {
         widget: "data",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  formSaveCall = () => {
+    const message = this.createChatBotMessage(
+      "If you want a call back please, fill the form below...",
+      {
+        widget: "datacall",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  afterCallBackForm = () => {
+    const message = this.createChatBotMessage(
+      "Do you think you migth be a private client or entitled to legal aid?" + "CHOOSE AN OPTION :",
+      {
+        widget: "privateorlegal",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  callBackPrivate = () => {
+    const message = this.createChatBotMessage(
+      "Just to double check, are you receiving any benefits at the moment?",
+      {
+        widget: "callbackprivate",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  thankForm = () => {
+    const message = this.createChatBotMessage(
+      "Thanks for getting in touch. We will get contact you shortly",
+      {
+        widget: "help",
       }
     );
     this.addMessageToState(message);
@@ -178,7 +243,24 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
-
+  callBack = () => {
+    const message = this.createChatBotMessage(
+      `As part of our commitment to the GDPR I need to ask your permission to take your data. We will keep your data confidential.${<a href ="https://www.directmediationservices.co.uk/mediation-policy/">Here is a link to our policy document.</a>}Do you agree with our policy document?`,
+      {
+        widget: "callback",
+      },
+    );
+    this.addMessageToState(message);
+  };
+  endChat = () => {
+    const message = this.createChatBotMessage(
+      "Because you have answered NO to this question you are unable to continue with this application. You can contact us on 0113 468 9593. Good bye! CHOOSE AN OPTION :",
+      {
+        widget: "help",
+      }
+    );
+    this.addMessageToState(message);
+  };
   //genreHandler = (chosenGenre) => { //wird bei der Autorauswahl aufgerufen und nicht chooseAuthor
   //this.setState({genre: chosenGenre});
   //this.chooseAuthor();

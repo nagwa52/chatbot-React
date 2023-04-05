@@ -18,14 +18,12 @@ const Phone = (props) => {
 
   const choiceHandler = (event) => {
     // console.log(event.target.value);
-    if(inputVal){
+    if(inputVal && props.updateCaseComponent){
     window.sessionStorage.setItem("phone", inputVal);
 		props.actionProvider.formSave()
-    // console.log(Object.keys(sessionStorage))
-    // for (const [key, value] of Object.entries(sessionStorage)) {
-    //     console.log({key, value});
-    // };
-					
+    } else if(inputVal && props.callBackComponent){
+      window.sessionStorage.setItem("phone", inputVal)
+      props.actionProvider.formSaveCall()
     } else {
       props.actionProvider.formPhone()
     }
@@ -41,6 +39,13 @@ const Phone = (props) => {
     }
   }
 
+  const getInputID = (event) => {
+    let input = document.getElementById("myInput");
+    event.preventDefault();
+    choiceHandler();
+  };
+
+
   const buttonsMarkup = phone.map((choice) => (
     // <Button
     //   key={choice.id}
@@ -50,12 +55,11 @@ const Phone = (props) => {
     // >
     //   {choice.text}
     // </Button>
-    <form key={choice.id}>
+    <form key={choice.id} onSubmit={(e) => getInputID(e)}>
       {/* <label className="knopf-container"> */}
         {choice.text}
         <input type="text" name="email"  onChange={(e) => validatePhone(e)} className="knopf-button" />
       <FontAwesomeIcon icon={faPaperPlane} onClick={choiceHandler} />
-
         <div style={{
           fontWeight: 'bold',
           color: 'red',
