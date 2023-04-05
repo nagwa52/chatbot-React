@@ -33,7 +33,7 @@ const Data = (props) => {
   const openForm = (e) => {
     e.preventDefault();
     window.open(
-      "https://www.directmediationservices.co.uk/laa-passporting/",
+      "https://reactform-382811.uc.r.appspot.com/",
       "_blank",
       "noreferrer"
     )
@@ -42,8 +42,6 @@ const Data = (props) => {
     } else if (props.callBackComponent) {
       props.actionProvider.afterCallBackForm();
     }
-
-
   }
 
 
