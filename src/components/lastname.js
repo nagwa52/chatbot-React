@@ -15,9 +15,12 @@ const Lastname = (props) => {
 
   const choiceHandler = (event) => {
     // console.log(event.target.value);
-    if(inputVal){
+    if(inputVal && props.updateCaseComponent){
     window.sessionStorage.setItem("lname", inputVal)
     props.actionProvider.formEmail()
+    } else if(inputVal && props.callBackComponent){
+      window.sessionStorage.setItem("lname", inputVal)
+      props.actionProvider.formEmailCall()
     } else {
       props.actionProvider.formLastName()
     }
@@ -26,6 +29,13 @@ const Lastname = (props) => {
   const lastNameVal = (event) => {
     setInputVal(event.target.value)
   }
+  const getInputID = (event)=> {
+    let input = document.getElementById("myInput");
+    event.preventDefault();
+        choiceHandler()
+  
+  }
+  
 
   const buttonsMarkup = lastname.map((choice) => (
     // <Button
@@ -36,7 +46,8 @@ const Lastname = (props) => {
     // >
     //   {choice.text}
     // </Button>
-    <form key={choice.id}>
+console.log(props),
+    <form key={choice.id}  onSubmit={(e) => getInputID(e)}>
       {/* <label className="knopf-container"> */}
         {choice.text}
         <input type="text" name="lname"  onChange={lastNameVal} className="knopf-button" />

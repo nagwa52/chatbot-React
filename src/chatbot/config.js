@@ -16,6 +16,10 @@ import Lastname from "../components/lastname";
 import Email from "../components/email";
 import Phone from "../components/phone";
 import Data from "../components/data";
+import Callback from "../components/callback";
+import Endchat from "../components/endchat";
+import Privateorlegal from "../components/aftercallbackform";
+import Callbackprivate from "../components/callbackprivate";
 
 const botName = "Larry";
 
@@ -30,7 +34,8 @@ const config = {
     })
   ],
   state: {
-    authorName: ""
+    callBackComponent:"callback",
+    updateCaseComponent:"updateCase",
   },
   customStyles: {
     botMessageBox: {
@@ -78,24 +83,70 @@ const config = {
       widgetFunc: (props) => <Moreinfonono {...props} />
     },
     {
+      widgetName: "firstnamecall",
+      widgetFunc: (props) => <Firstname {...props} />,
+      mapStateToProps: ['callBackComponent'],
+    },
+    {
       widgetName: "firstname",
-      widgetFunc: (props) => <Firstname {...props} />
+      widgetFunc: (props) => <Firstname {...props} />,
+      mapStateToProps: ['updateCaseComponent'],
+    },
+    {
+      widgetName: "lastnamecall",
+      widgetFunc: (props) => <Lastname {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "lastname",
-      widgetFunc: (props) => <Lastname {...props} />
+      widgetFunc: (props) => <Lastname {...props} />,
+      mapStateToProps: ['updateCaseComponent'],
+    },
+    {
+      widgetName: "emailcall",
+      widgetFunc: (props) => <Email {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "email",
-      widgetFunc: (props) => <Email {...props} />
+      widgetFunc: (props) => <Email {...props} />,
+      mapStateToProps: ['updateCaseComponent'],
+    },
+    {
+      widgetName: "phonecall",
+      widgetFunc: (props) => <Phone {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "phone",
-      widgetFunc: (props) => <Phone {...props} />
+      widgetFunc: (props) => <Phone {...props} />,
+      mapStateToProps: ['updateCaseComponent'],
+    },
+    {
+      widgetName: "datacall",
+      widgetFunc: (props) => <Data {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "data",
-      widgetFunc: (props) => <Data {...props} />
+      widgetFunc: (props) => <Data {...props} />,
+      mapStateToProps: ['updateCaseComponent'],
+    },
+    {
+      widgetName: "callback",
+      widgetFunc: (props) => <Callback {...props} />,
+    },
+    {
+      widgetName: "privateorlegal",
+      widgetFunc: (props) => <Privateorlegal {...props} />,
+    },
+    {
+      widgetName: "callbackprivate",
+      widgetFunc: (props) => <Callbackprivate {...props} />,
+    },
+    {
+      widgetName: "endchat",
+      widgetFunc: (props) => <Endchat {...props} />
     },
     {
       widgetName: "newChoices",

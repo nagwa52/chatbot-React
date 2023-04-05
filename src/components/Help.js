@@ -25,7 +25,7 @@ const Help = (props) => {
     },
     {
       text: "I would like to have an update about my case",
-      handler: props.actionProvider.formFirstName,
+      handler: props.actionProvider.formSave,
       id: 3
     },
     {
@@ -40,12 +40,12 @@ const Help = (props) => {
     },
     {
       text: "I would like a call back",
-      handler: props.actionProvider.recommend,
+      handler: props.actionProvider.formSaveCall,
       id: 6
     },
     {
       text: "I would like to talk to somebody about workplace mediation",
-      handler: props.actionProvider.recommend,
+      handler: props.actionProvider.formSave,
       id: 7
     },
   ];
