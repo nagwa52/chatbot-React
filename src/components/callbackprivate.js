@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./knopf.css";
 
 const Callbackprivate = (props) => {
 	const callBack = [

@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./knopf.css";
-
 const Genre = (props) => {
   const genres = [
     {
@@ -11,10 +9,10 @@ const Genre = (props) => {
     },
   ];
 
-  const genreHandler = (event) => {
-    console.log(event.target.value);
-    props.actionProvider.recommend(event.target.value);
-  };
+  // const genreHandler = (event) => {
+  //   console.log(event.target.value);
+  //   props.actionProvider.recommend(event.target.value);
+  // };
 
   const buttonsMarkup = genres.map((genre) => (
     <button

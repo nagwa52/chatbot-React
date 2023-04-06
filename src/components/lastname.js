@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import "./knopf.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,7 +29,7 @@ const Lastname = (props) => {
     setInputVal(event.target.value)
   }
   const getInputID = (event)=> {
-    let input = document.getElementById("myInput");
+    // let input = document.getElementById("myInput");
     event.preventDefault();
         choiceHandler()
   
@@ -46,7 +45,6 @@ const Lastname = (props) => {
     // >
     //   {choice.text}
     // </Button>
-console.log(props),
     <form key={choice.id}  onSubmit={(e) => getInputID(e)}>
       {/* <label className="knopf-container"> */}
         {choice.text}

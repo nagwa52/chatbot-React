@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./knopf.css";
 import Axios from "axios";
 const Data = (props) => {
-  const [userData, setUserData] = useState({
+  const [userData] = useState({
     fname: "",
     lname: "",
     email: "",
@@ -45,34 +44,34 @@ const Data = (props) => {
   }
 
 
-  const postData = (e) => {
-    e.preventDefault();
-    dataFromSessionStorage();
-    Axios.post("https://82ad-156-194-18-67.eu.ngrok.io/api/create", userData)
-      .then((res) => {
-        console.log("Data posted", res);
-        if (props.updateCaseComponent) {
-          props.actionProvider.thankForm();
-        } else if (props.callBackComponent) {
-          props.actionProvider.afterCallBackForm();
-        }
-      })
-      .catch((err) => {
-        // props.actionProvider.formFirstName();
-        if (props.updateCaseComponent) {
-          props.actionProvider.thankForm();
-        } else if (props.callBackComponent) {
-          props.actionProvider.afterCallBackForm();
-        }
-        console.log(props);
-      });
-  };
+  // const postData = (e) => {
+  //   e.preventDefault();
+  //   dataFromSessionStorage();
+  //   Axios.post("https://82ad-156-194-18-67.eu.ngrok.io/api/create", userData)
+  //     .then((res) => {
+  //       console.log("Data posted", res);
+  //       if (props.updateCaseComponent) {
+  //         props.actionProvider.thankForm();
+  //       } else if (props.callBackComponent) {
+  //         props.actionProvider.afterCallBackForm();
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       // props.actionProvider.formFirstName();
+  //       if (props.updateCaseComponent) {
+  //         props.actionProvider.thankForm();
+  //       } else if (props.callBackComponent) {
+  //         props.actionProvider.afterCallBackForm();
+  //       }
+  //       console.log(props);
+  //     });
+  // };
 
   return (
     <>
       <div className="knopf-container">
         <button className="knopf-button" onClick={openForm}>
-          FORM
+          Click Here
         </button>
       </div>
     </>

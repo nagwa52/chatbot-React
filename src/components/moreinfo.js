@@ -1,7 +1,4 @@
 import React from "react";
-
-import "./knopf.css";
-
 const Moreinfo = (props) => {
 	const moreinfo = [
 		{

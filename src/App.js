@@ -11,6 +11,8 @@ import Flip from "react-reveal/Flip";
 import larry from "./larry-2.jpeg"
 
 import "./App.css";
+import "./components/Knopf.css";
+
 
 function App() {
   const [showBot, toggleBot] = useState(false);

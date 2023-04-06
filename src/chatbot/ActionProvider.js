@@ -279,7 +279,7 @@ class ActionProvider {
   };
 
   async fetchBookHandler(aspect) {
-    let name = aspect;
+    // let name = aspect;
     //const searchAspect = this.state.
     const response = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=inauthor:${this.state.authorName}&orderBy=newest&maxResults=3`
