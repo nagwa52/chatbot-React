@@ -1,17 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 const Help = (props) => {
-  const helpChoices = 
-  // [
-  //   {
-  //     text: "Genre",
-  //     handler: props.actionProvider.chooseGenre,
-  //     id: 1
-  //   },
-  //   { text: "Autor", handler: props.actionProvider.chooseAuthor, id: 2 },
-  //   { text: "Beliebtheit", handler: () => {}, id: 3 }
-  // ];
-  [
+  const helpChoices = [
     {
       text: "Book a private appointment",
       handler: props.actionProvider.bookAppointment,
@@ -47,6 +37,18 @@ const Help = (props) => {
       id: 7
     },
   ];
+  function handleScroll() {
+    const scrollTop = document.getElementsByClassName("react-chatbot-kit-chat-message-container").scrollTo || document.body.scrollTop;
+    console.log(scrollTop)
+    // if (scrollTop > 0) {
+      window.scrollTo(0, 0);
+    // }
+  }
+  
+  document.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    handleScroll();
+  }, []);
 
   const buttonsMarkup = helpChoices.map((help) => (
     <button key={help.id} onClick={help.handler} className="knopf-button">

@@ -19,7 +19,7 @@ class ActionProvider {
 
   chooseAnOption = () => {
     const message = this.createChatBotMessage("CHOOSE AN OPTION :", {
-      widget: "help",
+      widget: "startagain",
     });
     this.addMessageToState(message);
   };
@@ -28,7 +28,7 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "CHOOSE AN OPTION :",
       {
-        widget: "help",
+        widget: "startagain",
       },
       window.open(
         "https://calendly.com/familymediation",
@@ -67,6 +67,33 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
+  moreInformationYesHomeless = () => {
+    const message = this.createChatBotMessage(
+      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      {
+        widget: "moreinfoyeshomeless",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  moreInformationYesMediationHome = () => {
+    const message = this.createChatBotMessage(
+      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      {
+        widget: "moreinfoyesmediationhome",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  applicationpassport= () => {
+    const message = this.createChatBotMessage(
+      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      {
+        widget: "startapplication",
+      }
+    );
+    this.addMessageToState(message);
+  };
   moreInformationNo = () => {
     const message = this.createChatBotMessage(
       "Do you think you might be entitled to legal aid because you are on a low income/no income/homeless?",
@@ -85,16 +112,12 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
-  startApplication = () => {
+  startAgain = () => {
     const message = this.createChatBotMessage(
-      window.open(
-        "https://www.directmediationservices.co.uk/laa-passporting/",
-        "_blank",
-        "noreferrer"
-      ),
+      "IF you want to start again click below...",
       {
-        widget: "help",
-      }
+        widget: "startagain",
+      },
     );
     this.addMessageToState(message);
   };
@@ -190,7 +213,7 @@ class ActionProvider {
   };
   afterCallBackForm = () => {
     const message = this.createChatBotMessage(
-      "Do you think you migth be a private client or entitled to legal aid?" + "CHOOSE AN OPTION :",
+      "Do you think you migth be a private client or entitled to legal aid? CHOOSE AN OPTION :",
       {
         widget: "privateorlegal",
       }
@@ -210,16 +233,16 @@ class ActionProvider {
     const message = this.createChatBotMessage(
       "Thanks for getting in touch. We will get contact you shortly",
       {
-        widget: "help",
+        widget: "startagain",
       }
     );
     this.addMessageToState(message);
   };
   mediationProcess = () => {
     const message = this.createChatBotMessage(
-      "CHOOSE AN OPTION :",
+      "IF you want to start again click below...",
       {
-        widget: "help",
+        widget: "startagain",
       },
       window.open(
         "https://www.directmediationservices.co.uk/mediation-services-uk/",
@@ -231,9 +254,9 @@ class ActionProvider {
   };
   respondTOInvitation = () => {
     const message = this.createChatBotMessage(
-      "CHOOSE AN OPTION :",
+      "IF you want to start again click below...",
       {
-        widget: "help",
+        widget: "startagain",
       },
       window.open(
         "https://www.directmediationservices.co.uk/reply-to-mediation/",
@@ -255,6 +278,15 @@ class ActionProvider {
   endChat = () => {
     const message = this.createChatBotMessage(
       "Because you have answered NO to this question you are unable to continue with this application. You can contact us on 0113 468 9593. Good bye! CHOOSE AN OPTION :",
+      {
+        widget: "startagain",
+      }
+    );
+    this.addMessageToState(message);
+  };
+  startAgainButton = () => {
+    const message = this.createChatBotMessage(
+      "CHOOSE AN OPTION :",
       {
         widget: "help",
       }

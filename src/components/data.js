@@ -1,36 +1,10 @@
-import React, { useState } from "react";
-import Axios from "axios";
+import React from "react";
 const Data = (props) => {
-  const [userData] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    phone: "",
-  });
-
-  const dataFromSessionStorage = () => {
-    for (const x of Object.entries(sessionStorage)) {
-      switch (x[0]) {
-        case "fname":
-          userData.fname = x[1];
-          console.log(userData);
-          break;
-        case "lname":
-          userData.lname = x[1];
-          break;
-        case "email":
-          userData.email = x[1];
-          break;
-        case "phone":
-          userData.phone = x[1];
-          break;
-      }
-    }
-  };
 
 
   const openForm = (e) => {
     e.preventDefault();
+    console.log(props)
     window.open(
       "https://reactform-382811.uc.r.appspot.com/",
       "_blank",

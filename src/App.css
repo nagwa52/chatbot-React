@@ -142,3 +142,26 @@
   left: 0;
   font-size: 18px;
 }
+
+.knopf-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.knopf-button {
+  margin: 5px;
+  border-radius: 25px;
+  padding: 8px;
+  border-color: black;
+  background: transparent;
+  text-align: center;
+}
+.react-chatbot-kit-chat-message-container {
+  scroll-behavior:smooth;
+
+}
+/* .react-chatbot-kit-chat-header::after {
+  font-weight: 900;
+  content: "X";
+  margin-left: 80px;
+} */

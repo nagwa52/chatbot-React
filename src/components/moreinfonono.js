@@ -3,7 +3,7 @@ const Moreinfono = (props) => {
 	const moreinfono = [
 		{
 			text: "YES",
-			handler: props.actionProvider.moreInformationYes,
+			handler: props.actionProvider.moreInformationYesMediationHome,
 			id: 1,
 		},
 		{
@@ -12,12 +12,6 @@ const Moreinfono = (props) => {
 			id: 2,
 		},
 	];
-
-	// const choiceHandler = (event) => {
-	// 	console.log(event.target.value);
-	// 	props.actionProvider.recommend(event.target.value);
-	// };
-
 	const buttonsMarkup = moreinfono.map((choice) => (
 		<button
 			key={choice.id}

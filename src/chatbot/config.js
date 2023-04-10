@@ -15,6 +15,8 @@ import Callback from "../components/callback";
 import Endchat from "../components/endchat";
 import Privateorlegal from "../components/aftercallbackform";
 import Callbackprivate from "../components/callbackprivate";
+import Startagain from "../components/startagain";
+// import Startapplication from "../components/startapplication";
 
 const botName = "Larry";
 
@@ -31,6 +33,9 @@ const config = {
   state: {
     callBackComponent:"callback",
     updateCaseComponent:"updateCase",
+    passporting:"passporting",
+    homeless:"homeless",
+    mediationhome:"mediationhome",
   },
   customStyles: {
     botMessageBox: {
@@ -51,19 +56,38 @@ const config = {
     },
     {
       widgetName: "moreinfo",
-      widgetFunc: (props) => <Moreinfo {...props} />
+      widgetFunc: (props) => <Moreinfo {...props} />,
+      mapStateToProps: ['passporting'],
     },
     {
       widgetName: "moreinfoyes",
-      widgetFunc: (props) => <Moreinfoyes {...props} />
+      widgetFunc: (props) => <Moreinfoyes {...props} />,
+      mapStateToProps: ['passporting'],
     },
     {
+      widgetName: "moreinfoyeshomeless",
+      widgetFunc: (props) => <Moreinfoyes {...props} />,
+      mapStateToProps: ['homeless'],
+    },
+    {
+      widgetName: "moreinfoyesmediationhome",
+      widgetFunc: (props) => <Moreinfoyes {...props} />,
+      mapStateToProps: ['mediationhome'],
+    },
+    // {
+    //   widgetName: "startapplication",
+    //   widgetFunc: (props) => <Startapplication {...props} />,
+    //   mapStateToProps: ['passporting'],
+    // },
+    {
       widgetName: "moreinfono",
-      widgetFunc: (props) => <Moreinfono {...props} />
+      widgetFunc: (props) => <Moreinfono {...props} />,
+      mapStateToProps: ['Homeless'],
     },
     {
       widgetName: "moreinfonono",
-      widgetFunc: (props) => <Moreinfonono {...props} />
+      widgetFunc: (props) => <Moreinfonono {...props} />,
+      mapStateToProps: ['Homeless'],
     },
     {
       widgetName: "firstnamecall",
@@ -130,6 +154,10 @@ const config = {
     {
       widgetName: "endchat",
       widgetFunc: (props) => <Endchat {...props} />
+    },
+    {
+      widgetName: "startagain",
+      widgetFunc: (props) => <Startagain {...props} />
     },
   ]
 };
