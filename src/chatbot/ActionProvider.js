@@ -293,6 +293,15 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
+  askLarry = () => {
+    const message = this.createChatBotMessage(
+      "CHOOSE AN OPTION :",
+      {
+        widget: "help",
+      }
+    );
+    this.addMessageToState(message);
+  };
   //genreHandler = (chosenGenre) => { //wird bei der Autorauswahl aufgerufen und nicht chooseAuthor
   //this.setState({genre: chosenGenre});
   //this.chooseAuthor();

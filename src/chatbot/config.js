@@ -16,6 +16,7 @@ import Endchat from "../components/endchat";
 import Privateorlegal from "../components/aftercallbackform";
 import Callbackprivate from "../components/callbackprivate";
 import Startagain from "../components/startagain";
+import Asklarry from "../components/asklarry";
 // import Startapplication from "../components/startapplication";
 
 const botName = "Larry";
@@ -24,10 +25,10 @@ const config = {
   botName: botName,
   initialMessages: [
     createChatBotMessage(
-      `Hi there! I am ${botName}, your DMS chat bot and I am here to help you. Below are some common things that people ask me.`
+      `Hi there! I am ${botName}, your DMS chat bot and I am here to help you.`
     ),
-    createChatBotMessage(`CHOOSE AN OPTION`, {
-      widget: "help"
+    createChatBotMessage(`Below are some common things that people ask me.`, {
+      widget: "asklarry"
     })
   ],
   state: {
@@ -158,6 +159,10 @@ const config = {
     {
       widgetName: "startagain",
       widgetFunc: (props) => <Startagain {...props} />
+    },
+    {
+      widgetName: "asklarry",
+      widgetFunc: (props) => <Asklarry {...props} />
     },
   ]
 };

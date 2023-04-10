@@ -13,20 +13,20 @@ function App() {
 
   const [showBot, toggleBot] = useState(false);
 
-  function handleScroll() {
-    const scrollTop = document.documentElement.scrollHeight || document.body.scrollTop;
-    console.log(scrollTop)
-    if (scrollTop > 0) {
-      window.scrollTo(0, 0);
-    }
-  }
+  // function handleScroll() {
+  //   const scrollTop = document.documentElement.scrollHeight || document.body.scrollTop;
+  //   console.log(scrollTop)
+  //   if (scrollTop > 0) {
+  //     window.scrollTo(0, 0);
+  //   }
+  // }
   
 
   // container.addEventListener
-  document.addEventListener('scroll', handleScroll);
-  useEffect(() => {
-    handleScroll();
-  }, []);
+  // document.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   handleScroll();
+  // }, []);
   
   // To remove the event listener later
   // document.removeEventListener('scroll', handleScroll);
