@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Chatbot from "react-chatbot-kit";
 import config from "./chatbot/config";
 import ActionProvider from "./chatbot/ActionProvider";
@@ -6,45 +6,34 @@ import MessageParser from "./chatbot/MessageParser";
 import Fade from "react-reveal/Fade";
 import Flip from "react-reveal/Flip";
 import larry from "./larry-2.jpeg";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
 function App() {
-
   const [showBot, toggleBot] = useState(false);
 
-  // function handleScroll() {
-  //   const scrollTop = document.documentElement.scrollHeight || document.body.scrollTop;
-  //   console.log(scrollTop)
-  //   if (scrollTop > 0) {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }
-  
+  window.onload = function() {
+    var popup = document.getElementsByClassName("popup");
+    console.log(popup[0]);
+    var message = document.createElement("p");
+    message.textContent = "Hello, I'm Larry how can I help you today!";
+    popup[0].appendChild(message);
+    popup[0].style.display = "block";
+    setTimeout(function(){ popup[0].style.display = "none"; }, 3000);
 
-  // container.addEventListener
-  // document.addEventListener('scroll', handleScroll);
-  // useEffect(() => {
-  //   handleScroll();
-  // }, []);
-  
-  // To remove the event listener later
-  // document.removeEventListener('scroll', handleScroll);
+}
 
-//   const header = document.querySelectorAll(".react-chatbot-kit-chat-header");
-// header.addEventListener("click",handleScroll)
   return (
     <div className="App">
       {showBot && (
         <Fade big>
           <div className="app-chatbot-container">
             <Chatbot
-            className ="chatbot-page"
+              className="chatbot-page"
               config={config}
               actionProvider={ActionProvider}
               messageParser={MessageParser}
-              disableScrollToBottom
-              
             />
           </div>
         </Fade>
@@ -66,6 +55,19 @@ function App() {
           />
         </button>
       </Flip>
+
+      <div className="popup"></div>
+
+      {/* <Toast bg="primary" onClose={() => setShowToast(false)} show={showToast} delay={3000} autohide>
+      <Toast.Header>
+        <strong className="me-auto">Toast Title</strong>
+      </Toast.Header>
+      <Toast.Body>Hi, I'm Larry. How can I assist you today?</Toast.Body>
+    </Toast> */}
+
+
+
+
     </div>
   );
 }

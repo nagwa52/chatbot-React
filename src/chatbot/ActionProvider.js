@@ -26,7 +26,7 @@ class ActionProvider {
 
   bookAppointment = () => {
     const message = this.createChatBotMessage(
-      "CHOOSE AN OPTION :",
+      `CHOOSE AN OPTION :`,
       {
         widget: "startagain",
       },
@@ -42,7 +42,7 @@ class ActionProvider {
 
   makeAidApplication = () => {
     const message = this.createChatBotMessage(
-      "Legal aid is available for people in low income or in receipt of specific benefits.",
+      "Legal Aid is available for people in low income or in receipt of specific benefits.",
       {
         widget: "genre",
       }
@@ -60,7 +60,7 @@ class ActionProvider {
   };
   moreInformationYes = () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
       {
         widget: "moreinfoyes",
       }
@@ -69,7 +69,7 @@ class ActionProvider {
   };
   moreInformationYesHomeless = () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
       {
         widget: "moreinfoyeshomeless",
       }
@@ -78,7 +78,7 @@ class ActionProvider {
   };
   moreInformationYesMediationHome = () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
       {
         widget: "moreinfoyesmediationhome",
       }
@@ -87,7 +87,7 @@ class ActionProvider {
   };
   applicationpassport= () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response.You simply need to fill a form and one of our team will get in touch with you once your application is approved.If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
       {
         widget: "startapplication",
       }
@@ -96,7 +96,7 @@ class ActionProvider {
   };
   moreInformationNo = () => {
     const message = this.createChatBotMessage(
-      "Do you think you might be entitled to legal aid because you are on a low income/no income/homeless?",
+      "Do you think you might be entitled to Legal Aid because you are on a low income/no income/homeless?",
       {
         widget: "moreinfono",
       }
@@ -105,7 +105,7 @@ class ActionProvider {
   };
   moreInformationNoNo = () => {
     const message = this.createChatBotMessage(
-      "Because you are not receiving benefits or in low income, it is unlikely that you will qualify for legal aid. Knowing you might not be entitled to legal aid, would you still like to make an application for legal aid?",
+      "Because you are not receiving benefits or in low income, it is unlikely that you will qualify for Legal Aid. Knowing you might not be entitled to Legal Aid, would you still like to make an application for Legal Aid?",
       {
         widget: "moreinfonono",
       }
@@ -114,7 +114,7 @@ class ActionProvider {
   };
   startAgain = () => {
     const message = this.createChatBotMessage(
-      "IF you want to start again click below...",
+      "If you want to start again click below...",
       {
         widget: "startagain",
       },
@@ -204,7 +204,7 @@ class ActionProvider {
   };
   formSaveCall = () => {
     const message = this.createChatBotMessage(
-      "If you want a call back please, fill the form below...",
+      "If you want a call back, please fill the form",
       {
         widget: "datacall",
       }
@@ -213,7 +213,7 @@ class ActionProvider {
   };
   afterCallBackForm = () => {
     const message = this.createChatBotMessage(
-      "Do you think you migth be a private client or entitled to legal aid? CHOOSE AN OPTION :",
+      "Do you think you migth be a private client or entitled to Legal Aid? CHOOSE AN OPTION :",
       {
         widget: "privateorlegal",
       }
@@ -231,7 +231,7 @@ class ActionProvider {
   };
   thankForm = () => {
     const message = this.createChatBotMessage(
-      "Thanks for getting in touch. We will get contact you shortly",
+      "Thanks for getting in touch. We will contact you shortly",
       {
         widget: "startagain",
       }
@@ -240,7 +240,7 @@ class ActionProvider {
   };
   mediationProcess = () => {
     const message = this.createChatBotMessage(
-      "IF you want to start again click below...",
+      "If you want to start again click below...",
       {
         widget: "startagain",
       },
@@ -254,7 +254,7 @@ class ActionProvider {
   };
   respondTOInvitation = () => {
     const message = this.createChatBotMessage(
-      "IF you want to start again click below...",
+      "If you want to start again click below...",
       {
         widget: "startagain",
       },
@@ -302,6 +302,17 @@ class ActionProvider {
     );
     this.addMessageToState(message);
   };
+
+
+    workPlace= () => {
+    const message = this.createChatBotMessage(
+      "If you want to talk to someone, please fill the form",
+      {
+        widget: "data",
+      }
+    );
+    this.addMessageToState(message);
+  }
   //genreHandler = (chosenGenre) => { //wird bei der Autorauswahl aufgerufen und nicht chooseAuthor
   //this.setState({genre: chosenGenre});
   //this.chooseAuthor();

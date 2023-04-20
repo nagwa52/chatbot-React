@@ -31,7 +31,7 @@ class MessageParser {
       this.actionProvider.bookAppointment();
     }
     if (
-      lowercase.includes("make a legal aid application")
+      lowercase.includes("make a Legal Aid application")
     ) {
       this.actionProvider.makeAidApplication();
     }

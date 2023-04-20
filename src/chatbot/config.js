@@ -25,11 +25,9 @@ const config = {
   botName: botName,
   initialMessages: [
     createChatBotMessage(
-      `Hi there! I am ${botName}, your DMS chat bot and I am here to help you.`
-    ),
-    createChatBotMessage(`Below are some common things that people ask me.`, {
-      widget: "asklarry"
-    })
+      `Hi there! I am ${botName}, your DMS chat bot and I am here to help you.`, {
+        widget: "asklarry"
+      }),
   ],
   state: {
     callBackComponent:"callback",
@@ -143,10 +141,12 @@ const config = {
     {
       widgetName: "callback",
       widgetFunc: (props) => <Callback {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "privateorlegal",
       widgetFunc: (props) => <Privateorlegal {...props} />,
+      mapStateToProps: ['callBackComponent'],
     },
     {
       widgetName: "callbackprivate",

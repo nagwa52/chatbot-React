@@ -122,25 +122,24 @@
 }
 .app-chatbot-button-icon {
   fill: #fff;
-  border-radius:25px;
+  border-radius: 25px;
 }
 
-.react-chatbot-kit-chat-bot-avatar-letter
-{
+.react-chatbot-kit-chat-bot-avatar-letter {
   color: red !important;
   visibility: hidden;
   position: relative;
 }
 
 .react-chatbot-kit-chat-bot-avatar-letter::before {
-  font-weight: bold;
+  font-weight: 600;
   color: rgb(55, 107, 126);
   content: "L";
   visibility: visible;
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .knopf-container {
@@ -150,18 +149,45 @@
 }
 .knopf-button {
   margin: 5px;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px;
+  /* padding-left:10px;
+  padding-right:10px; */
   border-color: black;
   background: transparent;
-  text-align: center;
+  text-align: left;
+  font-size: 13px;
 }
 .react-chatbot-kit-chat-message-container {
-  scroll-behavior:smooth;
-
+  scroll-behavior: smooth;
 }
 /* .react-chatbot-kit-chat-header::after {
   font-weight: 900;
   content: "X";
   margin-left: 80px;
 } */
+
+
+.popup {
+  /* position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #f1f1f1;
+  padding: 16px;
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1; */
+  margin: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  z-index: 9999;
+  box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
+  background-color: #1f91e7;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}

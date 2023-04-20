@@ -9,7 +9,7 @@ const Privateorlegal = (props) => {
 			id: 1,
 		},
 		{  
-			text: "I would like to apply for legal aid",
+			text: "I would like to apply for Legal Aid",
 			handler: props.actionProvider.makeAidApplication,
 			id: 2,
 		},

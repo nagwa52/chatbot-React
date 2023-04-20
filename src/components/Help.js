@@ -7,7 +7,7 @@ const Help = (props) => {
       handler: props.actionProvider.bookAppointment,
       id: 1
     },
-    { text: "Make a legal aid application",
+    { text: "Make a Legal Aid application",
       handler: props.actionProvider.makeAidApplication,
       id: 2
     },
@@ -33,7 +33,7 @@ const Help = (props) => {
     },
     {
       text: "I would like to talk to somebody about workplace mediation",
-      handler: props.actionProvider.formSave,
+      handler: props.actionProvider.workPlace,
       id: 7
     },
   ];
