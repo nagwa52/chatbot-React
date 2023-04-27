@@ -60,7 +60,7 @@ class ActionProvider {
   };
   moreInformationYes = () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application for Legal Aid. If no submission is received, we will close your case and send court forms to your ex-partner.",
       {
         widget: "moreinfoyes",
       }
@@ -69,7 +69,7 @@ class ActionProvider {
   };
   moreInformationYesHomeless = () => {
     const message = this.createChatBotMessage(
-      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application. If no submission is received, we will close your case and sent [should be send] court forms to your ex-partner.",
+      "Thank you for your response. You simply need to fill a form and one of our team will get in touch with you once your application is approved. If you are responding to an invitation to mediation, you have FIVE working days to submit your application for Legal Aid. If no submission is received, we will close your case and send court forms to your ex-partner.",
       {
         widget: "moreinfoyeshomeless",
       }

@@ -3,7 +3,7 @@ const Moreinfono = (props) => {
 	const moreinfono = [
 		{
 			text: "YES",
-			handler: props.actionProvider.moreInformationYesMediationHome,
+			handler: props.actionProvider.moreInformationYesHomeless,
 			id: 1,
 		},
 		{

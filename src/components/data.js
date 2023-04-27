@@ -13,7 +13,7 @@ const Data = (props) => {
     if (props.updateCaseComponent) {
       props.actionProvider.thankForm();
     } else if (props.callBackComponent) {
-      props.actionProvider.afterCallBackForm();
+      props.actionProvider.thankForm();
     }
   }
 

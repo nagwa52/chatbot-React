@@ -17,10 +17,10 @@ function App() {
     var popup = document.getElementsByClassName("popup");
     console.log(popup[0]);
     var message = document.createElement("p");
-    message.textContent = "Hello, I'm Larry how can I help you today!";
+    message.textContent = "Hello, I'm Larry how can I help you today?";
     popup[0].appendChild(message);
     popup[0].style.display = "block";
-    setTimeout(function(){ popup[0].style.display = "none"; }, 3000);
+    setTimeout(function(){ popup[0].style.display = "none"; }, 5000);
 
 }
 
@@ -34,6 +34,7 @@ function App() {
               config={config}
               actionProvider={ActionProvider}
               messageParser={MessageParser}
+              placeholderText='Input placeholder'
             />
           </div>
         </Fade>
