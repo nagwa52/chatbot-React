@@ -163,7 +163,7 @@
 }
 .react-chatbot-kit-chat-message-container {
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow: auto !important;
 }
 /* .react-chatbot-kit-chat-header::after {
   font-weight: 900;
