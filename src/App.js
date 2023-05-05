@@ -13,16 +13,27 @@ import "./App.css";
 function App() {
   const [showBot, toggleBot] = useState(false);
 
-  window.onload = function() {
+  window.onload = function () {
     var popup = document.getElementsByClassName("popup");
     console.log(popup[0]);
     var message = document.createElement("p");
     message.textContent = "Hello, I'm Larry how can I help you today?";
     popup[0].appendChild(message);
     popup[0].style.display = "block";
-    setTimeout(function(){ popup[0].style.display = "none"; }, 5000);
+    if (showBot) {
+      console.log(showBot);
+      popup[0].style.display = "none";
+    } else {
+      setTimeout(function () {
+        popup[0].style.display = "none";
+      }, 5000);
+    }
+  };
 
-}
+  const handlePopUp = () => {
+    var popup = document.getElementsByClassName("popup");
+    popup[0].style.display = "none";
+  };
 
   return (
     <div className="App">
@@ -34,7 +45,7 @@ function App() {
               config={config}
               actionProvider={ActionProvider}
               messageParser={MessageParser}
-              placeholderText='Input placeholder'
+              placeholderText="Input placeholder"
             />
           </div>
         </Fade>
@@ -42,7 +53,7 @@ function App() {
       <Flip left cascade>
         <button
           className="app-chatbot-button"
-          onClick={() => toggleBot((prev) => !prev)}
+          onClick={() => toggleBot((prev) => !prev, handlePopUp())}
         >
           {/* <div>Chatbot</div> */}
           {/* <svg viewBox="0 0 640 512" className="app-chatbot-button-icon">
@@ -65,10 +76,6 @@ function App() {
       </Toast.Header>
       <Toast.Body>Hi, I'm Larry. How can I assist you today?</Toast.Body>
     </Toast> */}
-
-
-
-
     </div>
   );
 }
